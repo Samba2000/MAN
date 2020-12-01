@@ -20,28 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03ed76a8-6488-45e7-b9ac-609bd22ebdba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201124083207.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201124083623.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201124115807.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/GroupeFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/PromoFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Groupe.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Promo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/GroupeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/PromoRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/Voter/CompetencesVoter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/Voter/GroupeCompetenceVoter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/Voter/ReferentielVoter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ReferentielController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReferentielController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Apprenant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Apprenant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Competence.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Competence.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Formateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Formateur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/GroupeCompetence.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/GroupeCompetence.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Referentiel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Referentiel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +168,7 @@
       <updated>1606119676420</updated>
       <workItem from="1606119677469" duration="5790000" />
       <workItem from="1606683459963" duration="1018000" />
+      <workItem from="1606832342286" duration="1069000" />
     </task>
     <servers />
   </component>
