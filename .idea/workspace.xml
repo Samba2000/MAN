@@ -20,110 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03ed76a8-6488-45e7-b9ac-609bd22ebdba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/cache.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/nelmio_cors.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/prod/routing.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/routing.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/framework.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/twig.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/validator.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/validator.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/preload.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/api_platform.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/dev/framework.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201117113703.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201117145443.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201117153659.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201117154114.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118002225.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118113851.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118114212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118114357.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118114647.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118120246.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118180946.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118212906.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118213710.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118213759.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201118213958.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201119075858.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201119113819.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201119114211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201120084650.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201120112213.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201120125856.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201120132835.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201120133928.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201121110401.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201121111418.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ReferentielController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CompetenceFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/GroupeCompetenceFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/NiveauFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ProfilFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ProfilSortiFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ReferentielFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataPersister/ProfilDataPersister.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataPersister/ProfilSortiDataPersister.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataPersister/ReferentielDataPersister.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataPersister/UserDataPersister.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Apprenant.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ComminutyManger.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Competence.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Formateur.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/GroupeCompetence.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Niveau.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Profil.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ProfilSorti.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Referentiel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ApprenantRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ComminutyMangerRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CompetenceRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/FormateurRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/GroupeCompetenceRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/NiveauRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProfilRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProfilSortiRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ReferentielRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/apprenant/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profil_sorti/index.html.twig" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201124083207.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201124083623.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201124115807.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/GroupeFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/PromoFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Groupe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Promo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/GroupeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PromoRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/Voter/CompetencesVoter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/Voter/GroupeCompetenceVoter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/Voter/ReferentielVoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ReferentielController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReferentielController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Apprenant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Apprenant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Competence.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Competence.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Formateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Formateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/GroupeCompetence.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/GroupeCompetence.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Referentiel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Referentiel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -263,6 +188,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606119676420</updated>
       <workItem from="1606119677469" duration="5790000" />
+      <workItem from="1606683459963" duration="1018000" />
     </task>
     <servers />
   </component>
@@ -279,6 +205,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

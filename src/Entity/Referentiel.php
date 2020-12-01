@@ -29,7 +29,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *            "add_referentiel"={
  *               "method"="POST",
  *               "path"="/referentiels",
- *               "security"="is_granted('ROLE_ADMIN')",
+ *               "security"="is_granted('POST_REF', object)",
  *               "security_message"="Acces non autorisé",
  *          }
  *      },
@@ -38,26 +38,26 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *               "method"="GET",
  *               "path"="/referentiels/{id}",
  *                "defaults"={"id"=null},
- *                "security"="(is_granted('ROLE_FORMATEUR') or is_granted('ROLE_ADMIN') or is_granted('ROLE_CM'))",
+ *                "security"="(is_granted('GET_REF_ID', object))",
  *                  "security_message"="Acces non autorisé",
  *          },
  *
  *            "get_referentiel_id_grpcompetence"={
  *               "method"="GET",
  *               "path"="/referentiels/{id}/gprecompetences/{id1}",
- *                "security"="(is_granted('ROLE_FORMATEUR') or is_granted('ROLE_ADMIN') or is_granted('ROLE_CM'))",
+ *                "security"="(is_granted('GET_ID_GRP', object))",
  *                  "security_message"="Acces non autorisé",
  *          },
  *            "update_referentiel_id"={
  *               "method"="PUT",
  *               "path"="/referentiels/{id}",
- *                "security"="(is_granted('ROLE_FORMATEUR') or is_granted('ROLE_ADMIN') or is_granted('ROLE_CM'))",
+ *                "security"="(is_granted('PUT_REF', object))",
  *                  "security_message"="Acces non autorisé",
  *          },
  *            "delete_referentiel_id"={
  *               "method"="DELETE",
  *               "path"="/referentiels/{id}",
- *                "security"="(is_granted('ROLE_FORMATEUR') or is_granted('ROLE_ADMIN') or is_granted('ROLE_CM'))",
+ *                "security"="(is_granted('DELETE_REF', object))",
  *                  "security_message"="Acces non autorisé",
  *          },
  *      },
@@ -112,9 +112,15 @@ class Referentiel
      */
     private $grpCompetences;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Promo::class, mappedBy="referentiel")
+     */
+    private $promos;
+
     public function __construct()
     {
         $this->grpCompetences = new ArrayCollection();
+        $this->promos = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -202,6 +208,36 @@ class Referentiel
     public function removeGrpCompetence(GroupeCompetence $grpCompetence): self
     {
         $this->grpCompetences->removeElement($grpCompetence);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Promo[]
+     */
+    public function getPromos(): Collection
+    {
+        return $this->promos;
+    }
+
+    public function addPromo(Promo $promo): self
+    {
+        if (!$this->promos->contains($promo)) {
+            $this->promos[] = $promo;
+            $promo->setReferentiel($this);
+        }
+
+        return $this;
+    }
+
+    public function removePromo(Promo $promo): self
+    {
+        if ($this->promos->removeElement($promo)) {
+            // set the owning side to null (unless already changed)
+            if ($promo->getReferentiel() === $this) {
+                $promo->setReferentiel(null);
+            }
+        }
 
         return $this;
     }

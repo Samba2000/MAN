@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ApprenantRepository;
 use ApiPlatform\Core\Annotation\ApiResource;
@@ -90,7 +92,15 @@ class Apprenant extends User
      */
     private $statut;
 
-   
+    /**
+     * @ORM\ManyToMany(targetEntity=Groupe::class, mappedBy="apprenants")
+     */
+    private $groupes;
+
+    public function __construct()
+    {
+        $this->groupes = new ArrayCollection();
+    }
 
     public function getGenre(): ?string
     {
@@ -148,6 +158,33 @@ class Apprenant extends User
     public function setStatut(string $statut): self
     {
         $this->statut = $statut;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Groupe[]
+     */
+    public function getGroupes(): Collection
+    {
+        return $this->groupes;
+    }
+
+    public function addGroupe(Groupe $groupe): self
+    {
+        if (!$this->groupes->contains($groupe)) {
+            $this->groupes[] = $groupe;
+            $groupe->addApprenant($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGroupe(Groupe $groupe): self
+    {
+        if ($this->groupes->removeElement($groupe)) {
+            $groupe->removeApprenant($this);
+        }
 
         return $this;
     }

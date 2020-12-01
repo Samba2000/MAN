@@ -29,7 +29,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *            "add_grpCompetence"={
  *               "method"="POST",
  *               "path"="/grpecompetences",
- *               "security"="is_granted('ROLE_ADMIN')",
+ *               "security"="is_granted('POST_GRP', object)",
  *               "security_message"="Acces non autorisé",
  *          }
  *      },
@@ -38,20 +38,18 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *               "method"="GET",
  *               "path"="/grpecompetences/{id}",
  *                "defaults"={"id"=null},
- *                "security"="(is_granted('ROLE_FORMATEUR') or is_granted('ROLE_ADMIN') or is_granted('ROLE_CM'))",
+ *                "security"="(is_granted('GET_GRP_ID', object))",
  *                  "security_message"="Acces non autorisé",
  *          },
- *
  *            "get_grpcompetence_id_competence"={
  *               "method"="GET",
  *               "path"="/grpecompetences/{id}/competences",
- *                "security"="(is_granted('ROLE_FORMATEUR') or is_granted('ROLE_ADMIN') or is_granted('ROLE_CM'))",
+ *                "security"="(is_granted('GET_ID_GRP', object))",
  *                  "security_message"="Acces non autorisé",
  *          },
- *
  *            "PUT"={
  *               "path"="/grpecompetences/{id}",
- *                "security"="is_granted('GC_EDIT',object)",
+ *                "security"="is_granted('PUT_GRP',object)",
  *                  "security_message"="Acces non autorisé",
  *          },
  *      },
@@ -90,7 +88,7 @@ class GroupeCompetence
 
     /**
      * @ORM\ManyToMany(targetEntity=Competence::class, inversedBy="groupeCompetences")
-     * @Groups({"grpcompetence:read"})
+     * @Groups({"grpcompetence:write"})
      */
     private $competence;
 

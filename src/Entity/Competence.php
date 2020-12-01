@@ -22,7 +22,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *          "create_competence"={
  *               "method"="POST",
  *               "path"="/admin/competences",
- *                 "security"="(is_granted('ROLE_ADMIN'))",
+ *                 "security"="(is_granted('POST_COMP', object))",
  *                  "security_message"="Vous n'avez pas accés à cette ressource",
  *          }
  *     },
@@ -30,13 +30,13 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *           "get_admin_competences_id"={
  *               "method"="GET",
  *               "path"="/admin/competences/{id}",
- *                 "security"="(is_granted('ROLE_ADMIN'))",
+ *                 "security"="(is_granted('GET_COMP', object))",
  *                  "security_message"="Vous n'avez pas accés à cette ressource",
  *          },
  *            "put_admin_competences_id"={
  *               "method"="PUT",
  *               "path"="/admin/competences/{id}",
- *                 "security"="(is_granted('ROLE_ADMIN'))",
+ *                 "security"="(is_granted('PUT_COMP', object))",
  *                  "security_message"="Vous n'avez pas accés à cette ressource",
  *              }
  *          },
@@ -75,7 +75,6 @@ class Competence
 
     /**
      * @ORM\ManyToMany(targetEntity=GroupeCompetence::class, mappedBy="competence")
-     * @Groups({"competence:read"})
      */
     private $groupeCompetences;
 

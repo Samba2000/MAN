@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,17 +21,20 @@ class UserController extends AbstractController
     private $serializer;
     private $validator;
     private $em;
+    private $userRepository;
 
     public function __construct(
         UserPasswordEncoderInterface $encoder,
         SerializerInterface $serializer,
         ValidatorInterface $validator,
+        UserRepository $userRepository,
         EntityManagerInterface $em)
     {
         $this->encoder=$encoder;
         $this->serializer=$serializer;
         $this->validator=$validator;
         $this->em=$em;
+        $this->userRepository=$userRepository;
     }
     /**
      * @Route(
@@ -92,4 +96,33 @@ class UserController extends AbstractController
         
         return $this->json($user,201);
      }
+    /**
+     * @Route(
+     *     name="addUser",
+     *     path="/api/admin/users/{id}",
+     *     methods={"PUT"}
+     * )
+     */
+    public function putUser(Request $request,$id)
+    {
+        //recupéré tout les données de la requete
+        $user  =$this->userRepository->find($id);
+        $usersall = $request->request->all();
+        foreach ($usersall as $key => $value){
+            if ($key !== "_method" || !$value){
+
+                $user->{"set".ucfirst($key)}($value);
+            }
+        }
+        //recupération de l'image
+        $photo = $request->files->get("photo");
+
+        $photoBlob = fopen($photo->getRealPath(),"rb");
+
+        $user->setPhoto($photoBlob);
+       $this->em->persist($user);
+        $this->em->flush();
+
+        return $this->json("success",201);
+    }
 }
